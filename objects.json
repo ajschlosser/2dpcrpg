@@ -1,0 +1,322 @@
+/*
+    Copyright © 2013, 2014 Aaron John Schlosser
+
+    This file is part of 2dpcrpg by Aaron John Schlosser.
+
+    2dpcrpg is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    2dpcrpg is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with 2dpcrpg.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+// Configuration options
+{
+    "effects": {
+      "effect": [
+        {
+          "id": "grow",
+          "intensity": 10,
+          "actions": ["transform"],
+          "target": "neighbors",
+          "result": "self",
+          "requirements": ["fertile"]
+        }
+      ]
+    },
+    "aspects": {
+      "aspect": [
+        {
+          "id": "unpassable",
+          "category": "physical"
+        },
+        {
+          "id": "liquid",
+          "category": "physical"
+        },
+        {
+          "id": "soft",
+          "category": "physical"
+        },
+        {
+          "id": "hard",
+          "category": "physical"
+        },
+        {
+          "id": "sticky",
+          "category": "physical"
+        },
+        {
+          "id": "squishy",
+          "category": "physical"
+        },
+        {
+          "id": "stone",
+          "category": "physical"
+        },
+        {
+          "id": "messy",
+          "category": "physical"
+        },
+        {
+          "id": "cool",
+          "category": "physical"
+        },
+        {
+          "id": "warm",
+          "category": "physical"
+        },
+        {
+          "id": "destructable",
+          "category": "physical"
+        },
+        {
+          "id": "vegetated",
+          "category": "plant",
+          "effects": ["grow"]
+        },
+        {
+          "id": "fertile",
+          "category": "plant"
+        },
+        {
+          "id": "mobile",
+          "category": "animal"
+        },
+        {
+          "id": "breathing",
+          "category": "animal"
+        },
+        {
+          "id": "hostile",
+          "category": "mental"
+        },
+        {
+          "id": "common",
+          "category": "value"
+        },
+        {
+          "id": "uncommon",
+          "category": "value"
+        },
+        {
+          "id": "rare",
+          "category": "value"
+        },
+        {
+          "id": "legendary",
+          "category": "value"
+        },
+        {
+          "id": "mythical",
+          "category": "value"
+        }
+      ]
+    },
+    "objects": {
+      "object": [
+        {
+          "id": "player",
+          "tileset": "player",
+          "name": "Player",
+          "description": "you"
+        },
+        {
+          "id": "grass",
+          "tileset": "terrain",
+          "name": "Grass",
+          "description": "a lush patch of green grass",
+          "aspect": [
+            {
+              "intensity": 10,
+              "id": "soft"
+            },
+            {
+              "intensity": 50,
+              "id": "vegetated"
+            },
+            {
+              "intensity": 50,
+              "id": "fertile"
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        },
+        {
+          "id": "water",
+          "tileset": "terrain",
+          "name": "Water",
+          "description": "a blue expanse of water",
+          "aspect": [
+            {
+                "id": "unpassable",
+                "intensity": 100
+            },
+            {
+                "id": "liquid",
+                "intensity": 100
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        },
+        {
+          "id": "dirt",
+          "tileset": "terrain",
+          "name": "Dirt",
+          "description": "a pile of brown dirt strewn with pebbles",
+          "aspect": [
+            {
+              "intensity": 15,
+              "id": "hard"
+            },
+            {
+              "intensity": 35,
+              "id": "messy"
+            },
+            {
+              "intensity": 55,
+              "id": "fertile"
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        },
+        {
+          "id": "pine tree",
+          "tileset": "flora",
+          "name": "Pine Tree",
+          "description": "a tall, fragrant pine tree",
+          "aspect": [
+            {
+              "intensity": 10,
+              "id": "hard"
+            },
+            {
+              "intensity": 50,
+              "id": "vegetated"
+            },
+            {
+                "id": "destructable",
+                "intensity": 100
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        },
+        {
+          "id": "mudstone",
+          "tileset": "blocks",
+          "name": "Mudstone",
+          "description": "a dull, common, hard rock brown in color",
+          "aspect": [
+            {
+              "intensity": 10,
+              "id": "hard"
+            },
+            {
+              "intensity": 10,
+              "id": "stone"
+            },
+            {
+                "id": "destructable",
+                "intensity": 100
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        },
+        {
+          "id": "greystone",
+          "tileset": "blocks",
+          "name": "Greystone",
+          "description": "a solid, grey rock handy for building with",
+          "aspect": [
+            {
+              "intensity": 15,
+              "id": "hard"
+            },
+            {
+                "id": "stone",
+                "intensity": 100
+            },
+            {
+                "id": "destructable",
+                "intensity": 100
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        },
+        {
+          "id": "blue slime",
+          "tileset": "mobs",
+          "name": "Blue Slime",
+          "description": "a quivering, blue slime",
+          "attribute": {
+            "-type": "hp",
+            "id": "10"
+          },
+          "aspect": [
+            {
+              "intensity": 35,
+              "id": "sticky"
+            },
+            {
+              "intensity": 35,
+              "id": "squishy"
+            },
+            {
+              "intensity": 50,
+              "id": "messy"
+            },
+            {
+              "intensity": 10,
+              "id": "warm"
+            },
+            {
+              "intensity": 100,
+              "id": "mobile"
+            },
+            {
+              "intensity": 100,
+              "id": "animal"
+            },
+            {
+              "intensity": 10,
+              "id": "hostile"
+            },
+            {
+                "id": "destructable",
+                "intensity": 100
+            },
+            {
+                "id": "common",
+                "intensity": 100
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

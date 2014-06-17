@@ -1,0 +1,180 @@
+/*
+    Copyright © 2013, 2014 Aaron John Schlosser
+
+    This file is part of 2dpcrpg by Aaron John Schlosser.
+
+    2dpcrpg is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    2dpcrpg is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with 2dpcrpg.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+// Configuration options
+{
+    // Video settings
+    "video" : { "title" : "Modlike (2dpcrpg) Alpha 0.0.1",
+                "width" : 1024,
+                "height": 640,
+                "x": 0,
+                "y": 0,
+                "w_flag" : "SDL_WINDOW_OPENGL",
+                "r_flag" : "SDL_RENDERER_ACCELERATED" },
+    // Font settings
+    "fonts": {
+        "font": [
+          {
+            "id": "standard",
+            "path": "font/manaspace.ttf",
+            "size": 16
+          }
+        ]
+    },
+    // Tileset settings
+    "tilesets" : {
+        "tileset": [
+            {
+              "id": "terrain",
+              "path": "art/terrain.png"
+            },
+            {
+              "id": "player",
+              "path": "art/player.png"
+            },
+            {
+              "id": "flora",
+              "path": "art/flora.png"
+            },
+            {
+              "id": "weapons",
+              "path": "art/weapons.png"
+            },
+            {
+              "id": "mobs",
+              "path": "art/mobs.png"
+            },
+            {
+              "id": "blocks",
+              "path": "art/blocks.png"
+            },
+            {
+              "id": "effects",
+              "path": "art/effects.png"
+            }
+        ]
+    },
+    // Sprite settings
+    "sprites": {
+        "sprite": [
+            {
+              "id": "player",
+              "tileset": "player",
+              "src_x": 0,
+              "src_y": 0,
+              "animated": "true",
+              "mobile": "true"
+            },
+            {
+              "id": "grass",
+              "tileset": "terrain",
+              "src_x": 0,
+              "src_y": 0
+            },
+            {
+              "id": "water",
+              "tileset": "terrain",
+              "src_x": 32,
+              "src_y": 0
+            },
+            {
+              "id": "dirt",
+              "tileset": "terrain",
+              "src_x": 64,
+              "src_y": 0
+            },
+            {
+              "id": "fog",
+              "tileset": "terrain",
+              "src_x": 288,
+              "src_y": 32
+            },
+            {
+              "id": "pine tree",
+              "tileset": "flora",
+              "src_x": 0,
+              "src_y": 0
+            },
+            {
+              "id": "short sword",
+              "tileset": "weapons",
+              "src_x": 96,
+              "src_y": 0
+            },
+            {
+              "id": "mudstone",
+              "tileset": "blocks",
+              "src_x": 0,
+              "src_y": 0
+            },
+            {
+              "id": "greystone",
+              "tileset": "blocks",
+              "src_x": 32,
+              "src_y": 0
+            },
+            {
+              "id": "sandstone",
+              "tileset": "blocks",
+              "src_x": 64,
+              "src_y": 0
+            },
+            {
+              "id": "blackstone",
+              "tileset": "blocks",
+              "src_x": 96,
+              "src_y": 0
+            },
+            {
+              "id": "bloodstone",
+              "tileset": "blocks",
+              "src_x": 128,
+              "src_y": 0
+            },
+            {
+              "id": "bluestone",
+              "tileset": "blocks",
+              "src_x": 160,
+              "src_y": 0
+            },
+            {
+              "id": "whitestone",
+              "tileset": "blocks",
+              "src_x": 192,
+              "src_y": 0
+            },
+            {
+              "id": "blue slime",
+              "tileset": "mobs",
+              "src_x": 0,
+              "src_y": 0,
+              "animated": "true",
+              "mobile": "true"
+            },
+            {
+              "id": "red slime",
+              "tileset": "mobs",
+              "src_x": 32,
+              "src_y": 0,
+              "animated": "true",
+              "mobile": "true"
+            }
+        ]
+    }
+}
