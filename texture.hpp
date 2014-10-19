@@ -23,7 +23,7 @@
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
 #include "SDL2/SDL_ttf.h"
-#include "jsoncpp/json.h"
+#include "jsoncpp/json/json.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
