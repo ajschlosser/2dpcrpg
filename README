@@ -1,0 +1,1 @@
+Compile with `g++ -std=gnu++11 game.cpp engine.cpp engine.hpp input.cpp object.cpp texture.cpp jsoncpp/dist/jsoncpp.cpp -o game -l SDL2 -l SDL2_image -l SDL2_ttf'

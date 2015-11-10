@@ -1,5 +1,5 @@
 /*
-    Copyright © 2013, 2014 Aaron John Schlosser
+    Copyright © 2013, 2014, 2015 Aaron John Schlosser
 
     This file is part of 2dpcrpg by Aaron John Schlosser.
 
@@ -61,7 +61,7 @@ void Engine::ParseSettings ()
     std::ifstream objects_file("objects.json", std::ifstream::binary);
     bool parsed = reader.parse(objects_file, objects_);
     if (!parsed) {
-        std::cout  << "[ERROR]: Failed to parse configuration!" << std::endl << reader.getFormatedErrorMessages() << std::endl;
+        std::cout  << "[ERROR]: Failed to parse configuration!" << std::endl << reader.getFormattedErrorMessages() << std::endl;
     }
 }
 

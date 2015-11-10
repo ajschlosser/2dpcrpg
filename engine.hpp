@@ -1,5 +1,5 @@
 /*
-    Copyright © 2013, 2014 Aaron John Schlosser
+    Copyright © 2013, 2014, 2015 Aaron John Schlosser
 
     This file is part of 2dpcrpg by Aaron John Schlosser.
 
@@ -23,7 +23,7 @@
 #include "SDL2/SDL_image.h"
 #include "SDL2/SDL_ttf.h"
 #include "SDL2/SDL_mixer.h"
-#include "jsoncpp/json/json.h"
+#include "jsoncpp-new/json/json.h"
 #include "FL/Fl.H"
 #include "FL/Fl_Window.H"
 #include "FL/Fl_Box.H"

@@ -1,5 +1,5 @@
 /*
-    Copyright © 2013, 2014 Aaron John Schlosser
+    Copyright © 2013, 2014, 2015 Aaron John Schlosser
 
     This file is part of 2dpcrpg by Aaron John Schlosser.
 

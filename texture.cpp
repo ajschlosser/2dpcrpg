@@ -1,5 +1,5 @@
 /*
-    Copyright © 2013, 2014 Aaron John Schlosser
+    Copyright © 2013, 2014, 2015 Aaron John Schlosser
 
     This file is part of 2dpcrpg by Aaron John Schlosser.
 
@@ -25,7 +25,7 @@ void TextureManager::ParseSettings ()
     std::ifstream settings_file("settings.json", std::ifstream::binary);
     bool parsed = reader.parse(settings_file, settings_);
     if (!parsed) {
-        std::cout  << "[ERROR]: Failed to parse configuration!" << std::endl << reader.getFormatedErrorMessages() << std::endl;
+        std::cout  << "[ERROR]: Failed to parse configuration!" << std::endl << reader.getFormattedErrorMessages() << std::endl;
     }
 }
 
